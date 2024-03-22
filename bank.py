@@ -1,4 +1,4 @@
-from BankFeatures import BankFeatures
+from bankfeatures import BankFeatures
 class Bank:
 
     user = BankFeatures(userCash = int(input("Enter Your initial balance: ")))
