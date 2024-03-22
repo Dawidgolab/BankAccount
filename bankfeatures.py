@@ -9,7 +9,12 @@ class BankFeatures:
 
 
     def withdrawal(self, amount):
-        self.account -= amount
+        if self.userCash == 0 or amount > self.userCash:
+            print("You dont have enough money to make this operation!!!")
+            print(self.__str__())
+        else:
+            self.account -= amount
+            print(self.__str__())
 
 
     def __str__(self):

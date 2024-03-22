@@ -4,22 +4,23 @@ class Bank:
     user = BankFeatures(userCash = int(input("Enter Your initial balance: ")))
 
     while True:
-        choice = int(input("Select the option: 1.Show account status | 2.Deposit | 3.Withdrawal | 4.Exit: \n"))
-        if choice == 1:
+        choice = input("Select the option: 1.Show account status | 2.Deposit | 3.Withdrawal | 4.Exit: \n")
+        if choice == '1':
             print(user)
 
-        elif choice == 2:
+        elif choice == '2':
             withdrawalAmount = int(input("Enter the amount to deposit: "))
             user.deposit(withdrawalAmount)
             print(user)
 
-        elif choice == 3:
+        elif choice == '3':
             withdrawalAmount = int(input("Enter the amount to deposit: "))
             user.withdrawal(withdrawalAmount)
-            print(user)
 
-        else:
+        elif choice == '4':
             print("Good Bye!!")
             break
+        else:
+            print("You selected wrong option, try again!!!")
 
 
