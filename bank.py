@@ -5,6 +5,7 @@ class Bank:
 
 
     while True:
+        print("------------------------------------------------------------------------------------------")
         choice = input("Select the option: 1.Show account status | 2.Deposit | 3.Withdrawal | 4.Exit: \n")
         if choice == '1':
             print(user)
@@ -17,7 +18,7 @@ class Bank:
         elif choice == '3':
             amountOfMoney = int(input("How much you want to withdraw: "))
             result = user.try_withdrawal(amountOfMoney)
-            print(result["message"], user)
+            print(result.message, user)
 
         elif choice == '4':
             print("Good Bye!!")
